@@ -1,6 +1,6 @@
-# Flet app
+# A hl2patcher Flet app
 
-A simple Flet app.
+An example of a minimal Flet app.
 
 To run the app:
 

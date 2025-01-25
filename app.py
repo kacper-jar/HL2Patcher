@@ -1,8 +1,8 @@
 import flet as ft
 
-from src.pages.patch_config_page import PatchConfigPage
-from src.pages.start_page import StartPage
-from src.services.page_navigation_service import PageNavigationService
+from pages.patch_config_page import PatchConfigPage
+from pages.start_page import StartPage
+from services.page_navigation_service import PageNavigationService
 
 
 class App:
