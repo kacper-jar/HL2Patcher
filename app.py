@@ -1,5 +1,6 @@
 import flet as ft
 
+from pages.before_patch_page import BeforePatchPage
 from pages.patch_config_page import PatchConfigPage
 from pages.start_page import StartPage
 from services.page_navigation_service import PageNavigationService
@@ -7,12 +8,15 @@ from services.page_navigation_service import PageNavigationService
 
 class App:
     def __init__(self, page: ft.Page):
+        self.__version__ = "1.0"
         page.title = "HL2Patcher"
+
         self.page = page
         self.nav_service = PageNavigationService(self)
 
         self.pages = {
             "start": StartPage(self),
+            "before_patch": BeforePatchPage(self),
             "patch_config": PatchConfigPage(self),
         }
         self.current_page = "start"
