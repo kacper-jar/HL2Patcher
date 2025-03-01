@@ -1,3 +1,4 @@
+import logging
 from typing import Optional, Any
 
 
@@ -7,6 +8,7 @@ class PageNavigationService:
     """
     def __init__(self, app):
         self.app = app
+        self.logger = logging.getLogger(__name__)
 
     def navigate_by_name(self, page_name: str, args: Optional[dict[str, Any]] = None):
         """
@@ -16,6 +18,7 @@ class PageNavigationService:
             page_name: name of the page to navigate to.
             args: arguments to pass to the page.
         """
+        self.logger.info(f"Navigating to page '{page_name}' with arguments: {args}")
         self.app.page.session.set("nav_page", page_name)
         self.app.page.session.set("nav_args", args)
         self.app.navigate(page_name)

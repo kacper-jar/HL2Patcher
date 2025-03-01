@@ -40,7 +40,6 @@ class StartPage:
 
     def build(self):
         check_result = self.tools_checker_service.check_tools()
-        print(check_result)
 
         return ft.Column([
             ft.Card(
@@ -148,7 +147,6 @@ class StartPage:
 
     def is_next_button_enabled(self, check_result):
         all_installed = all(check_result.values())
-        print(all_installed)
         return all_installed
 
     def open_python_modal(self):

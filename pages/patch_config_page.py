@@ -13,7 +13,7 @@ class PatchConfigPage:
         self.app = app
         self.nav_service = app.nav_service
 
-        self.working_dir = "/tmp/HL2Patcher"
+        self.working_dir = "/tmp/HL2Patcher/working"
         self.game_dir = None
 
         self.working_dir_picker = ft.FilePicker(

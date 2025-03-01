@@ -1,3 +1,4 @@
+import logging
 import os
 import shutil
 
@@ -10,10 +11,12 @@ class PatcherService:
     """
     def __init__(self, command_runner_service):
         self.command_runner_service = command_runner_service
+        self.logger = logging.getLogger(__name__)
 
         self.repo_url = "https://github.com/nillerusr/source-engine.git"
 
     def apply_patch(self, working_dir: str, game_dir: str, modal: PatchInProgressModal):
+        self.logger.info("Applying patch...")
         modal.set_total_tasks(5)
         try:
             modal.next_task("Preparing working directory...")
@@ -32,7 +35,7 @@ class PatcherService:
             modal.next_task("Replacing game files...")
             output_dir = os.path.join(working_dir, "output")
             if not os.path.exists(output_dir):
-                print("Error: 'output' directory was not created.")
+                self.logger.error("'output' directory was not created.")
                 return 1
 
             hl2_osx_path = os.path.join(game_dir, "hl2_osx")
@@ -55,7 +58,7 @@ class PatcherService:
 
             return 0
         except Exception as e:
-            print(f"Error: {e}")
+            self.logger.error(f"Error during applying patch: {e}")
             return 1
         finally:
             modal.set_task(5, "Cleaning up...")

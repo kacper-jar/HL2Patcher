@@ -1,3 +1,4 @@
+import logging
 import os
 
 class ToolsCheckerService:
@@ -6,6 +7,7 @@ class ToolsCheckerService:
     """
     def __init__(self, command_runner_service):
         self.command_runner_service = command_runner_service
+        self.logger = logging.getLogger(__name__)
 
     def check_tools(self):
         """
@@ -51,4 +53,5 @@ class ToolsCheckerService:
 
         status["homebrew-packages"] = all_packages_installed
 
+        self.logger.info("Tools installed: {}".format(status))
         return status

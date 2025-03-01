@@ -1,12 +1,12 @@
+import logging
 import subprocess
-import sys
 
 class CommandRunnerService:
     """
     A class used to execute shell commands.
     """
     def __init__(self):
-        pass
+        self.logger = logging.getLogger(__name__)
 
     def run_command(self, command):
         """
@@ -15,11 +15,11 @@ class CommandRunnerService:
         Args:
             command: Shell command to execute.
         """
-        print(f"Executing: {command}")
+        self.logger.info(f"Executing: {command}")
         try:
             result = subprocess.run(command, shell=True, cwd=None, check=True, text=True, capture_output=True)
-            print(result.stdout)
+            self.logger.info(f"Output: {result.stdout}")
         except subprocess.CalledProcessError as e:
-            print(f"Error executing command: {command}")
-            print(e.stderr)
+            self.logger.error(f"Error executing command: {command}")
+            self.logger.error(e.stderr)
             raise SystemExit(e.stderr)

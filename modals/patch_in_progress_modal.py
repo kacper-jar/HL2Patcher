@@ -1,3 +1,5 @@
+import logging
+
 import flet as ft
 
 
@@ -10,6 +12,8 @@ class PatchInProgressModal(ft.AlertDialog):
         self.modal = True
         self.title = ft.Text("Patching...")
         self.content = None
+
+        self.logger = logging.getLogger(__name__)
 
         self.current_task = 0
         self.total_tasks = 1
@@ -34,6 +38,7 @@ class PatchInProgressModal(ft.AlertDialog):
         self.current_task = task_id
         self.content = ft.Text(f"The patching process is underway and may take a few minutes. Please ensure you have a stable internet connection to avoid any issues while downloading files from GitHub.\nCurrent task ({self.current_task}/{self.total_tasks}): {task_name}")
         self.update()
+        self.logger.info(f"Current task ({self.current_task}/{self.total_tasks}): {task_name}")
 
     def next_task(self, task_name):
         """
