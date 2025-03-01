@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -d "build" ]; then
+    echo "Existing 'build' folder found. Deleting..."
+    rm -rf build
+    echo "'build' folder deleted."
+fi
+
 if [ ! -d ".venv" ]; then
     echo "Virtual environment not found. Creating one..."
     python3 -m venv .venv
