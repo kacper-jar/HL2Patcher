@@ -21,6 +21,10 @@ def main(page: ft.Page):
     logger = logging.getLogger(__name__)
     logger.info("Logger initialized")
 
+    # Ensure Homebrew is in PATH when running the app, it fixes issues with Homebrew
+    homebrew_path = "/opt/homebrew/bin/brew"
+    os.environ["PATH"] += f":{os.path.dirname(homebrew_path)}"
+
     app = hlpatcher_app.App(page)
     page.on_route_change = app.navigate
 
