@@ -6,16 +6,22 @@
 
 With Apple dropping support for 32-bit applications, *Half-Life 2* and its version of the Source Engine no longer function on macOS. HL2Patcher resolves this by retrieving a modified version of the Source Engine code and compiling it for ARM-based 64-bit architecture, so the game can run again.  
 
+## 🔧 Requirements  
+
+- macOS **Big Sur (11.0)** or later
+- A copy of *Half-Life 2* installed via Steam
+
 ## 📥 Installation  
 
 1. Download the latest release from [GitHub Releases](https://github.com/KZL00/HL2Patcher/releases).  
 2. Extract the app and move it to the Applications folder.  
-3. Launch HL2Patcher and follow the on-screen instructions.  
+3. Launch HL2Patcher and follow the on-screen instructions.
 
-## 🔧 Requirements  
+## 🗂 Why Does HL2Patcher Need Access to the Documents Folder?  
 
-- macOS **Big Sur (11.0)** or later  
-- A copy of *Half-Life 2* installed via Steam  
+macOS asks for permission to access your Documents folder because of the file picker functionality in HL2Patcher. This is a standard permission request when the app needs to interact with files on your system.  
+
+It is **recommended** that you allow this permission for HL2Patcher to function as intended, but everything should work fine as long as you don't select the "Documents" folder during the file selection process. 
 
 ## 🏗 How to Build  
 
