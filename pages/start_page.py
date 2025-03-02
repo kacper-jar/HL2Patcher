@@ -126,6 +126,20 @@ class StartPage:
                     ])
                 )
             ),
+            ft.Card(
+                content=ft.Container(
+                    content=ft.Column([
+                        ft.ListTile(
+                            title=ft.Text("Re-verify tool installation"),
+                            trailing=ft.TextButton(
+                                text="Refresh",
+                                icon=ft.icons.REFRESH,
+                                on_click=lambda e: self.refresh()
+                            )
+                        )
+                    ])
+                )
+            ),
             ft.Row([
                 ft.TextButton(
                     "Next",
@@ -184,3 +198,6 @@ class StartPage:
 
     def close_dependencies_modal(self):
         self.app.page.close(self.dependencies_modal)
+
+    def refresh(self):
+        self.nav_service.reload()

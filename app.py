@@ -25,6 +25,7 @@ class App:
             "patch_config": PatchConfigPage(self),
         }
         self.current_page = "start"
+        self.page.session.set("nav_page", self.current_page)
         self.logger.info(f'App initialized. ({self.__version__})')
 
         self.build()
