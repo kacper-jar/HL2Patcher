@@ -29,5 +29,8 @@ If applicable, add screenshots to help explain your problem.
  - HomeBrew version
  - Dependencies (run this command in terminal and paste output here - `brew list --versions sdl2 freetype2 fontconfig pkg-config opus libpng libedit`)
 
+**Logs**
+Attach `HL2Patcher.log` file located in `/private/tmp/HL2Patcher`
+
 **Additional context**
 Add any other context about the problem here.
