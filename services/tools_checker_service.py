@@ -12,6 +12,9 @@ class ToolsCheckerService:
     def check_tools(self):
         """
         Checks if Python, Xcode, Xcode CLI tools, Homebrew and Homebrew packages (dependencies) are installed.
+
+        Returns: dict: returns dictionary with tool names as keys and their install status as values. The value is
+        True if installed or False if it's not installed.
         """
         status = {}
 

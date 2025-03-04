@@ -1,6 +1,9 @@
 import flet as ft
 
 class BeforePatchPage:
+    """
+    Class representing 'Before Patch' page.
+    """
     def __init__(self, app):
         self.app = app
         self.nav_service = app.nav_service

@@ -1,5 +1,4 @@
 import logging
-
 import flet as ft
 
 from pages.before_patch_page import BeforePatchPage
@@ -9,6 +8,9 @@ from services.page_navigation_service import PageNavigationService
 
 
 class App:
+    """
+    HL2Patcher entry point and main class. It initializes and manages pages.
+    """
     def __init__(self, page: ft.Page):
         self.logger = logging.getLogger(__name__)
         self.logger.info('Initializing app...')

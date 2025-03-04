@@ -16,6 +16,17 @@ class PatcherService:
         self.repo_url = "https://github.com/nillerusr/source-engine.git"
 
     def apply_patch(self, working_dir: str, game_dir: str, modal: PatchInProgressModal):
+        """
+        Applies patch to the game.
+
+        Args:
+            working_dir: directory to keep temporary files in.
+            game_dir: directory to copy patched fies to.
+            modal: modal displaying patch progress.
+
+        Returns:
+            int: returns 0 if patch was applied successfully, 1 otherwise.
+        """
         self.logger.info("Applying patch...")
         modal.set_total_tasks(5)
         try:

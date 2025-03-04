@@ -1,5 +1,4 @@
 import flet as ft
-import sys
 
 from modals.patch_failed_modal import PatchFailedModal
 from modals.patch_in_progress_modal import PatchInProgressModal
@@ -9,6 +8,9 @@ from services.patcher_service import PatcherService
 
 
 class PatchConfigPage:
+    """
+    Class representing 'Patch Configuration' page.
+    """
     def __init__(self, app):
         self.app = app
         self.nav_service = app.nav_service

@@ -12,6 +12,9 @@ from services.tools_checker_service import ToolsCheckerService
 
 
 class StartPage:
+    """
+    Class representing 'Start' page.
+    """
     def __init__(self, app):
         self.app = app
         self.nav_service = app.nav_service
