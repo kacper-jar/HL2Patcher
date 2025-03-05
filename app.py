@@ -2,9 +2,11 @@ import logging
 import flet as ft
 
 from pages.before_patch_page import BeforePatchPage
+from pages.not_supported_page import NotSupportedPage
 from pages.patch_config_page import PatchConfigPage
 from pages.start_page import StartPage
 from services.page_navigation_service import PageNavigationService
+from services.system_checker_service import SystemCheckerService
 
 
 class App:
@@ -20,13 +22,20 @@ class App:
 
         self.page = page
         self.nav_service = PageNavigationService(self)
+        self.system_checker_service = SystemCheckerService(self)
 
         self.pages = {
+            # Patcher pages
             "start": StartPage(self),
             "before_patch": BeforePatchPage(self),
             "patch_config": PatchConfigPage(self),
+            # Error pages
+            "not_supported": NotSupportedPage(self),
         }
-        self.current_page = "start"
+        if self.system_checker_service.check_system():
+            self.current_page = "start"
+        else:
+            self.current_page = "not_supported"
         self.page.session.set("nav_page", self.current_page)
         self.logger.info(f'App initialized. ({self.__version__})')
 
