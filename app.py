@@ -17,7 +17,7 @@ class App:
         self.logger = logging.getLogger(__name__)
         self.logger.info('Initializing app...')
 
-        self.__version__ = "1.0"
+        self.__version__ = "1.0.1"
         page.title = "HL2Patcher"
 
         self.page = page
