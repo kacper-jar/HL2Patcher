@@ -17,6 +17,21 @@ With Apple dropping support for 32-bit applications, *Half-Life 2* and its versi
 2. Extract the app and move it to the Applications folder.  
 3. Launch HL2Patcher and follow the on-screen instructions.
 
+## 🚨 Why Does macOS Say HL2Patcher Cannot Be Opened?
+
+Since HL2Patcher is not notarized by Apple, you may see a warning when trying to open the app:
+
+> *"Apple could not verify 'HL2Patcher' is free of malware that may harm your Mac or compromise your privacy."*
+
+To bypass this warning:
+
+1. Open **System Settings** → **Privacy & Security**.
+2. Scroll down to the **Security** section.
+3. You should see a message about HL2Patcher being blocked. Click **"Open Anyway."**
+4. Confirm your choice when prompted.
+
+This is a standard warning for apps that are not notarized by Apple. HL2Patcher is open-source, so you can inspect the code or build it yourself if you have concerns.
+
 ## 🗂 Why Does HL2Patcher Need Access to the Documents Folder?  
 
 macOS asks for permission to access your Documents folder because of the file picker functionality in HL2Patcher. This is a standard permission request when the app needs to interact with files on your system.  
