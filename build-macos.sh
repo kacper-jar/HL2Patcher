@@ -27,6 +27,11 @@ fi
 
 source .venv/bin/activate
 
-flet build --project "HL2Patcher" --product "HL2Patcher" macos
+NAME="HL2Patcher"
+COPYRIGHT="Copyright (c) 2025 Kacper Jarosławski"
+DESC="HL2Patcher makes Half-Life 2 playable on modern ARM Macs that only support 64-bit apps. Its goal is to simplify the process into an easy-to-use app, so anyone can enjoy the game again without hassle."
+BUILD="1.0.1"
+
+flet build --project "$NAME" --product "$NAME" --copyright "$COPYRIGHT" --description "$DESC" --build-version "$BUILD" macos
 
 echo "Build completed."
