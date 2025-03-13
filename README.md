@@ -13,7 +13,7 @@ With Apple dropping support for 32-bit applications, *Half-Life 2* and its versi
 
 ## 📥 Installation  
 
-1. Download the latest release from [GitHub Releases](https://github.com/KZL00/HL2Patcher/releases).  
+1. Download the latest release from [GitHub Releases](https://github.com/kacper-jar/HL2Patcher/releases).  
 2. Extract the app and move it to the Applications folder.  
 3. Launch HL2Patcher and follow the on-screen instructions.
 

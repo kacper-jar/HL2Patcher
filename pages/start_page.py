@@ -58,7 +58,7 @@ class StartPage:
                             trailing=ft.IconButton(
                                 ft.icons.BUG_REPORT,
                                 tooltip="Bug Report",
-                                on_click=lambda e: webbrowser.open("https://github.com/KZL00/HL2Patcher/issues/new?template=bug_report.md")
+                                on_click=lambda e: webbrowser.open("https://github.com/kacper-jar/HL2Patcher/issues/new?template=bug_report.md")
                             )
                         )
                     ])
