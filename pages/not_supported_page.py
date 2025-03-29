@@ -1,5 +1,6 @@
 import flet as ft
 
+
 class NotSupportedPage:
     def __init__(self, app):
         self.app = app

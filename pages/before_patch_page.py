@@ -1,5 +1,6 @@
 import flet as ft
 
+
 class BeforePatchPage:
     """
     Class representing 'Before Patch' page.

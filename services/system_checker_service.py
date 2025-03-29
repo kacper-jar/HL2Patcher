@@ -1,6 +1,7 @@
 import logging
 import platform
 
+
 class SystemCheckerService:
     """
     A class used to check if system is supported.

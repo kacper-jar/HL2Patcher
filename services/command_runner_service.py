@@ -1,6 +1,7 @@
 import logging
 import subprocess
 
+
 class CommandRunnerService:
     """
     A class used to execute shell commands.

@@ -50,7 +50,7 @@ class StartPage:
                     content=ft.Column([
                         ft.ListTile(
                             leading=ft.Image(
-                                src=f"../assets/icon.png",
+                                src="../assets/icon.png",
                                 fit=ft.ImageFit.CONTAIN
                             ),
                             title=ft.Text(f'Welcome to HL2Patcher ({self.app.__version__})'),
