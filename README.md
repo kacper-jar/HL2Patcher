@@ -4,6 +4,8 @@
 
 > [!IMPORTANT]
 > HL2Patcher is currently **not functioning correctly** and will not be updated or fixed for the time being. The tool either gets stuck on the cleanup stage during patching or fails to launch due to issues with the packaged Python environment.
+> 
+> Currently, there are **no plans to fix HL2Patcher**, as debugging this issue is impacting my motivation for other projects. If you have insights into the problem, feel free to contribute.
 
 ## 🛠 How It Works  
 
