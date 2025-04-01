@@ -2,6 +2,9 @@
 
 **HL2Patcher** makes *Half-Life 2* playable on modern ARM Macs that only support 64-bit applications. Its goal is to simplify the patching process into an easy-to-use app, so anyone can enjoy the game again without hassle.  
 
+> [!IMPORTANT]
+> HL2Patcher is currently **not functioning correctly** and will not be updated or fixed for the time being. The tool either gets stuck on the cleanup stage during patching or fails to launch due to issues with the packaged Python environment.
+
 ## 🛠 How It Works  
 
 With Apple dropping support for 32-bit applications, *Half-Life 2* and its version of the Source Engine no longer function on macOS. HL2Patcher resolves this by retrieving a modified version of the Source Engine code and compiling it for ARM-based 64-bit architecture, so the game can run again.  
